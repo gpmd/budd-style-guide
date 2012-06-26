@@ -303,10 +303,10 @@
                             <!-- Carousel items -->
                             <div class="carousel-inner">
                                 <div class="active item">
-                                    <img src="/img/ties.jpg" alt="New Season 100% Pure Silk Ties From &pound;65" />
+                                    <a href="#" title=""><img src="/img/slide-1.jpg" alt="New Season 100% Pure Silk Ties From &pound;65" /></a>
                                 </div>
                                 <div class="item">
-                                    <img src="/img/blank-slide.gif" alt="" />
+                                    <a href="#" title=""><img src="/img/slide-2.jpg" alt="Essential Accessories From &pound;39" /></a>
                                 </div>
                             </div>
                             <!-- Carousel nav -->
@@ -405,7 +405,7 @@
                             <h3>6.7 Product Filters</h3>
                         </div>
                         
-                        <div class="control-group">
+                        <div class="product-filters control-group">
                             <div class="controls">
                                 <label class="checkbox inline">
                                     <input type="checkbox" value="option1" id="inlineCheckbox1"> 
@@ -416,7 +416,7 @@
                                     This is an active filter
                                 </label>
                                 <label class="checkbox inline">
-                                    <a href="#" title="Clear all filters">Clear all filters</a>
+                                    <a href="#" title="Clear all filters" class="reset"><i class="icon-remove"></i> Clear all filters</a>
                                 </label>
                             </div>
                         </div>
@@ -477,17 +477,17 @@
                         
                             <div class="modal-header">
                                 <button data-dismiss="modal" class="close" type="button">×</button>
-                                <h3>Modal Heading</h3>
+                                <h2>Modal Heading</h2>
                             </div>
                             
                             <div class="modal-body">
-                                <h4 class="section-subheader">Text in a modal</h4>
+                                <h3>Text in a modal</h3>
                                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
                             </div>
                             
                             <div class="modal-footer">
-                                <a data-dismiss="modal" class="btn" href="#">Close</a>
-                                <a class="btn btn-primary" href="#">Save changes</a>
+                                <a data-dismiss="modal" class="btn btn-small" href="#">Close</a>
+                                <a class="btn btn-primary btn-small" href="#">Save changes</a>
                             </div>
                             
                         </div>
@@ -503,39 +503,39 @@
                         </div>
                         
                         <form class="well form-search">
-                            <input type="text" class="input-medium search-query">
-                            <button type="submit" class="btn">Search</button>
+                            <input type="text" class="input-xlarge search-query">
+                            <button type="submit" class="search-btn"><i class="icon-large icon-search"></i> Search</button>
                         </form>
                         
                         <form class="well">
                             <div class="control-group">
-                                <label for="input01" class="control-label">Standard text input</label>
+                                <label for="input01" class="control-label">Standard text input:</label>
                                 <div class="controls">
                                     <input type="text" id="input01" class="input-xlarge">
                                 </div>
                             </div>
                             <div class="control-group warning">
-                                <label for="inputWarning" class="control-label">Input with warning</label>
+                                <label for="inputWarning" class="control-label">Input with warning:</label>
                                 <div class="controls">
-                                    <input type="text" id="inputWarning">
-                                    <span class="help-inline">Something may have gone wrong</span>
+                                    <input type="text" id="inputWarning" class="input-xlarge">
+                                    <span class="help-inline">Something may have gone wrong:</span>
                                 </div>
                             </div>
                             <div class="control-group error">
-                                <label for="inputError" class="control-label">Input with error</label>
+                                <label for="inputError" class="control-label">Input with error:</label>
                                 <div class="controls">
-                                    <input type="text" id="inputError">
+                                    <input type="text" id="inputError" class="input-xlarge">
                                     <span class="help-inline">Please correct the error</span>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label for="textarea" class="control-label">Textarea</label>
+                                <label for="textarea" class="control-label">Textarea:</label>
                                 <div class="controls">
                                     <textarea rows="3" id="textarea" class="input-xlarge"></textarea>
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label for="select01" class="control-label">Select list</label>
+                                <label for="select01" class="control-label">Select list:</label>
                                 <div class="controls">
                                     <select id="select01">
                                         <option>Choose something...</option>
@@ -547,15 +547,15 @@
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label for="optionsCheckbox" class="control-label">Checkbox</label>
+                                <label for="optionsCheckbox" class="control-label">Checkbox:</label>
                                 <div class="controls">
                                     <label class="checkbox">
                                     <input type="checkbox" value="option1" id="optionsCheckbox">Tick this box if you agree.</label>
                                 </div>
                             </div>
                             <div class="form-actions">
-                                <button class="btn">Cancel</button>
-                                <button class="btn btn-primary" type="submit">Save changes</button>
+                                <button class="btn btn-small">Cancel</button>
+                                <button class="btn btn-small btn-primary" type="submit">Save changes</button>
                             </div>
                         </form>
                     
@@ -580,9 +580,9 @@
                             <button data-dismiss="alert" class="close" type="button">×</button>
                             <h4 class="alert-heading">Error - something seems to have gone wrong!</h4>
                             <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                            <p>
-                                <a href="#" class="btn btn-danger">Take this action</a> <a href="#" class="btn">Or do this</a>
-                            </p>
+                            <div>
+                                <a href="#" class="btn btn-small btn-danger">Take this action</a> <a href="#" class="btn btn-small">Or do this</a>
+                            </div>
                         </div>
                     
                     </section>
@@ -632,8 +632,9 @@
     <script src="/bootstrap/js/bootstrap-collapse.js"></script>
     <script src="/bootstrap/js/bootstrap-carousel.js"></script>
     <script src="/bootstrap/js/bootstrap-typeahead.js"></script>
-    <script src="/js/plugins.js"></script>
-    <script src="/js/scripts.js"></script>
+    <!-- The -ck.js versions are Codekit minfied -->
+    <script src="/js/plugins-ck.js"></script>
+    <script src="/js/scripts-ck.js"></script>
 
 </body>
 
