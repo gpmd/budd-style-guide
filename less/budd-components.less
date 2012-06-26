@@ -1,0 +1,83 @@
+/* budd-components.less
+ *
+ * Styling for Budd specific components
+ */
+
+
+// ==========================================================================
+// Images
+// ==========================================================================
+
+// Featured images
+// ==========================================================================
+
+/*.featured-image {
+	position: relative;
+	display: block;
+	max-width: 700px;
+	.featured-text {
+		//.box-sizing(border-box);
+		position: absolute;
+		top: 10px;
+		bottom: 10px;
+		left: 0px;
+		width: 40%;
+		height: auto;
+		padding: 40px;
+		background-color: #fff;
+		background-color: rgba(255,255,255,0.85);
+		h2,
+		h3 {
+			margin-bottom: @baseLineHeight / 2;
+			line-height: @baseLineHeight;
+		}
+		p {
+			margin-bottom: @baseLineHeight / 2;
+			line-height: @baseLineHeight;
+			a {}
+		}
+		& > :first-child {
+			border-top: 1px solid @buddGrey;
+			padding-top: @baseLineHeight / 1.5;
+		}
+		& > :last-child {
+			border-bottom: 1px solid @buddGrey;
+			padding-bottom: @baseLineHeight;
+		}
+	}
+	img {}
+}*/
+
+.featured-image {
+	position: relative;
+	display: block;
+	max-width: 700px;
+	.featured-text {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0px;
+		width: 40%;
+		height: auto;
+	}
+}
+
+// Media queries
+@media (max-width: 767px) {
+	.featured-image {
+		position: relative;
+		display: block;
+		max-width: 700px;
+		text-align: center;
+		.featured-text {
+			position: relative;
+			top: 0;
+			bottom: 0;
+			left: 0px;
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
+		}
+	}
+}

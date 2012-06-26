@@ -1,0 +1,173 @@
+ /* navbar.less
+ *
+ * Navbar (fixed and static)
+ */
+
+
+// COMMON STYLES
+// -------------
+
+// Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
+.navbar-inner {
+  min-height: @navbarHeight;
+  padding-left:  0;
+  padding-right: 0;
+  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  .border-radius(0);
+  .box-shadow(~"0 0 0 rgba(0,0,0,0), inset 0 0 0 rgba(0,0,0,0)");
+}
+
+
+// NAVIGATION
+// ----------
+
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 0;
+}
+
+.navbar .nav > li {
+  display: block;
+  float: left;
+  width: ((@fluidGridColumnWidth * 3) + (@fluidGridGutterWidth * 2)); // columns + gutters
+  margin-right: @fluidGridGutterWidth;
+  margin-bottom: 0;
+  border-bottom: 1px solid @buddGrey;
+  &:last-child {
+    margin-right: 0;
+  }
+  &.open {
+    border-bottom: none;
+  }
+}
+
+// Links
+.navbar .nav > li > a {
+  float: none;
+  // Vertically center the text given @navbarHeight
+  @elementHeight: 20px;
+  padding: ((@navbarHeight - @elementHeight) / 2 - 1) 0 ((@navbarHeight - @elementHeight) / 2 + 2);
+  line-height: 19px;
+  color: @navbarLinkColor;
+  .copperplate-medium;
+  .font-size(14);
+  text-decoration: none;
+  text-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+// Activate dropdowns on hover (overrides Bootstrap's default click to open)
+.navbar .nav > li:hover {
+  border-bottom: none;
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+
+// Dropdown menus
+// --------------
+
+// Menu position and menu carets
+.navbar .dropdown-menu {
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left:   0 solid transparent;
+    border-right:  0 solid transparent;
+    border-bottom: 0 solid @white;
+    border-bottom-color: @white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    border-left:   0 solid transparent;
+    border-right:  0 solid transparent;
+    border-bottom: 0 solid @white;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+// Menu position and menu caret support for dropups via extra dropup class
+.navbar-fixed-bottom .dropdown-menu {
+  &:before {
+    border-top: 0 solid @white;
+    border-top-color: @white;
+    border-bottom: 0;
+    bottom: 0;
+    top: 0;
+  }
+  &:after {
+    border-top: 0 solid @white;
+    border-bottom: 0;
+    bottom: 0;
+    top: 0;
+  }
+}
+
+// Overrides for the default dropdown styling
+// ----------------------
+.navbar .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: @zindexDropdown;
+  // display: none; disabled here as it was messing with the default Bootstrap functionality
+  //display: none; // none by default, but block on "open" of the menu
+  float: left;
+  width: 100%;
+  max-width: 100%;
+  padding: 4px 0;
+  margin: 0; // override default ul
+  list-style: none;
+  background-color: @dropdownBackground;
+  border: none;
+  border-bottom: 1px solid @buddGrey;
+  *border-right-width: 0;
+  *border-bottom-width: 0;
+  .border-radius(0px);
+  .box-shadow(0 0 0 rgba(0,0,0,0));
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+
+  // List items within the dropdown menu
+  li {
+    margin-bottom: 0;
+    .nested-submenu {
+      margin-left: @baseLineHeight / 2;
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+
+  & > li:last-child {
+    margin-bottom: @baseLineHeight / 2;
+  }
+
+  // Links within the dropdown menu
+  a {
+    display: block;
+    padding: 0;
+    clear: both;
+    .copperplate-light;
+    .font-size(14);
+    .line-height(18);
+    color: @dropdownLinkColor;
+    white-space: nowrap;
+    text-decoration: none;
+    &:hover {
+      color: @buddGreyLight;
+      background-color: transparent;
+    }
+  }
+}

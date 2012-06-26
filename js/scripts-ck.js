@@ -1,0 +1,1 @@
+jQuery.noConflict();jQuery(document).ready(function(e){e(".carousel").carousel("cycle",{interval:7500,pause:"hover"})});

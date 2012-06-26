@@ -1,0 +1,45 @@
+/* scaffolding.less
+ *
+ * Basic and global styles for generating a grid system, structural layout, and page templates
+ */
+
+
+// ==========================================================================
+// Body reset & global styles
+// ==========================================================================
+
+// Body defaults
+ body {
+ 	padding: @baseLineHeight * 2 @baseLineHeight;
+	font-family: @baseFontFamily;
+	font-size: 16px; // Fallback for browsers that don't understand 'rem's
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @textColor;
+	background-color: @bodyBackground;
+ }
+
+// Box model
+ * {
+ 	.box-sizing(border-box);
+ }
+
+
+// ==========================================================================
+// Links
+// ==========================================================================
+
+a {
+	color: @linkColor;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: @linkColorHover;
+	text-decoration: none;
+}
+
+a:active,
+a:visited {
+	color: @linkColorHover;
+}
