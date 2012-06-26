@@ -81,3 +81,98 @@
 		}
 	}
 }
+
+
+// ==========================================================================
+// Toolbar
+// ==========================================================================
+
+// Toolbar
+// ==========================================================================
+
+.toolbar {
+	position: relative;
+	.clearfix;
+	padding: 5px 0;
+	border-top: 1px solid @buddGrey;
+	border-bottom: 1px solid @buddGrey;
+}
+
+// Info
+// ==========================================================================
+
+.info {
+	.pull-left;
+}
+
+// Media queries
+@media (max-width: 767px) {
+	.info {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+// Pagination
+// ==========================================================================
+
+// See pagination.less
+
+// Page count
+// ==========================================================================
+
+.page-count {
+	.pull-right;
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		margin-bottom: 0;
+		li {
+			display: inline-block;
+			.ie7-inline-block();
+			a {
+				position: relative;
+				margin-right: 25px;
+				color: @buddGrey;
+				&:after {
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: -15px;
+					width: 5px;
+					height: auto;
+					content: "•";
+					color: @buddGreyLighter;
+				}
+			}
+			&.active {
+				a {
+					.garamond-bold;
+					text-decoration: none;
+				}
+			}
+			&:first-child {
+				margin-right: 10px;
+			}
+			&:last-child {
+				a {
+					margin-right: 0;
+					&:after {
+						content: "";
+					}
+				}
+			}
+		}
+	}
+}
+
+// Media queries
+@media (max-width: 767px) {
+	.page-count {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+}
